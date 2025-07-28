@@ -50,5 +50,10 @@ form {
 
 fieldset {
     border: solid teal;
-    margin: 5px;
+}
+
+button {
+    font-weight: bold;
+    border: solid teal;
+    border-radius: 5px;
 }
