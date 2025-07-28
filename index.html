@@ -1,29 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Sign-Up Page</title>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Header Section -->
-     <header>
+    <header>
+      <h1>2025 Chicago Auto Show</h1>
+    </header>
+    <h2>Event Info</h2>
+    <!-- Main Section -->
+    <main>
+      <div class="info">
+        <p>
+          Register your vehicle to be featured in our showcase at 999 North Ave,
+          Chicago, IL 12345
+        </p>
+        <time datetime="2025-08-01 11:00">August 1st, 2025 11:00 am</time>
+      </div>
+      <div class="event-info">
+        <div>
+          <ul>
+            <li>
+              3 catergories: People's Choice, Best in Show, Participant's Choice
+            </li>
+            <li>Live music, food vendors, merchandise booths</li>
+          </ul>
+        </div>
+        <img class="rx7" src="images/IMG_9706.jpg" alt="RX-7" />
+      </div>
+    </main>
+    <!-- Form Section -->
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Personal Info</legend>
 
-     </header>
+        <div class="form-group">
+          <label for="fname">First Name* (required)</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            pattern="[A-Z a-z]{2,20}"
+            aria-describedby="fname-help"
+          />
+          <small id="fname-help">
+            Enter your first name (2-20 Characters)
+          </small>
+        </div>
 
-     <!-- Main Section -->
-        <main>
+        <div class="form-group">
+          <label for="lname">Last Name* (required)</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            pattern="[A-Z a-z]{2,20}"
+            aria-describedby="lname-help"
+          />
+          <small id="lname-help">
+            Enter your last name (2-20 Characters)
+          </small>
+        </div>
 
-        </main>
-     <!-- Content Section -->
-        <section>
-            
-        </section>
-     <!-- Footer Section -->
-        <footer>
-            
-        </footer>
+        <div class="form-group">
+          <label for="email">Email* (required)</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            pattern="[A-Z a-z]{2,50}"
+            aria-describedby="email-help"
+          />
+          <small id="email-help">
+            We will never share your email address
+          </small>
+        </div>
 
-</body>
+        <div class="form-group">
+          <label for="tel">Phone Number (optional)</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+            aria-describedby="tel-help"
+          />
+          <small id="tel-help"> Format: 123-456-7890 </small>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth* (required)</label>
+          <input
+            type="date"
+            id="dob"
+            name="dob"
+            pattern="[A-Z a-z]{2,50}"
+            aria-describedby="dob-help"
+          />
+          <small id="dob-help"> Must be at least 18 years old </small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group">
+          <label for="how">How did you hear about us?</label>
+          <select name="how" id="how">
+            <option value="social">Social media</option>
+            <option value="refer">Referral</option>
+            <option value="search">Search engine</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="erefer">*</label>
+          <input
+            type="text"
+            id="erefer"
+            name="erefer"
+            pattern="[A-Za-z]{2,50}"
+            aria-describedby="erefer"
+          />
+          <small id="erefer">*If referred please provide employee name</small>
+        </div>
+        <fieldset>
+          <legend>Entry Tier</legend>
+          <div class="radio-group">
+            <input type="radio" id="VIP" name="type" value="VIP" />
+            <label for="VIP">VIP (high traffic areas)</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="Plus" name="type" value="Plus" />
+            <label for="Plus">Plus (medium traffic areas)</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="Standard" name="type" value="Standard" />
+            <label for="Standard">Standard (low traffic areas)</label>
+          </div>
+        </fieldset>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <small id="checkbox">Click to subscribe to our newsletter</small>
+        </div>
+      <fieldset>
+         <h4>Special requests/comments</h4>
+         <textarea class="special" 
+         name="special" 
+         id="special"
+         rows="5"
+         cols="50">
+      </textarea>
+      </fieldset>  
+    </form> 
+    <button type="submit">Submit</button>
+    <button type="reset">Clear</button>
+      
+    <!-- Footer Section -->
+    <footer>
+      2025 Chicago Auto Show
+
+    </footer>
+  </body>
 </html>

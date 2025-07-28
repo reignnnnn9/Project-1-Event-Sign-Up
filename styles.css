@@ -1,0 +1,54 @@
+img {
+    max-width: 100%;
+    max-height: 350px;
+}
+
+.event-info {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 10px;
+}
+
+header h1 {
+    background-color: black;
+    color: skyblue;
+    padding: 10px;
+    border: solid white;
+    width: fit-content;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.info {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D1D1D1;
+    color: teal;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.special{
+    resize: none;
+}
+
+form {
+    color: darkblue;
+}
+
+fieldset {
+    border: solid teal;
+    margin: 5px;
+}
